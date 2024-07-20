@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+@font-face {
+    font-family: Deatcher;
+    src: url(Detacher.ttf);
+}
+body{
+    background-color: black;
+    color: white;
+    height: 100vh;
+   overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    h1{
+        font-family: Deatcher;
+        display: flex;
+        gap: -20px;
+      
+    }
+    img{
+        width: 6%;
+    }
+    ul{
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        position: relative;
+       
+        li{
+            margin-top: 10px;
+        }
+        li.active{
+            color: #BA23AC ;
+        }
+        li.active::after{
+            content: " ";
+            display: block;
+            width: 70px;
+            height: 1px;
+            background-color:#BA23AC;
+            margin-top: 5px;
+           
+        
+        }
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        a{
+            text-decoration: none;
+            color: white;
+            border: 0.5px solid#BA23AC;
+            padding: 5px;
+            width: 100px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px #BA23AC;
+
+        }
+    }
+}
+@media(max-width:767px){
+    nav{
+        padding: 10px;
+        img{
+            width: 10%;
+        }
+        div{
+            gap: 9px;
+        }
+    }
+
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .left{
+        width: 50%;
+        margin-left: 80px;
+        h1{
+            font-family:Deatcher;
+            margin-bottom: 30px;
+            font-size: 45px;
+            font-weight: 700;
+            span{
+                color: #BA23AC;
+            }
+        }
+       
+        p{
+            font-size: 20px;
+            margin-top: 40px;
+            
+        }
+        .explore{
+            button{
+              
+               color: white;
+                border: 0.5px solid#BA23AC;
+                padding: 10px;
+                width: 130px;
+                text-align: center;
+                border-radius: 5px;
+                background-color: transparent ;
+                box-shadow: 2px 2px 5px #BA23AC;
+                margin-right: 30px;
+
+            }
+            span{
+                
+                img{
+                    width: 5%;
+                    font-size: 57px;
+                }
+            }
+        }
+        .review{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            margin-top: 110px;
+            width: 70%;
+            div{
+                position: relative;
+                h1{
+                    font-size: 40px;
+                    margin: 0;
+                    position: relative;
+                    i{
+                        font-size: 20px;
+                        color: #BA23AC;
+                       position: absolute;
+                       top: 10px;
+                    }
+                }
+                p{
+                    margin: 0;
+                    color: #BA23AC ;
+                    font-size: 15px;
+                    font-family:"Laila", cursive;
+                }
+                .star{
+                    width: 70%;
+                    position: absolute;
+                    top: -30px;
+                    left: -15px;
+                }
+                .star2{
+                    width: 70%;
+                    position: absolute;
+                    bottom: -10px;
+                    right: -45px;
+                }
+            }
+        }
+    }
+    .right{
+        width: 50%;
+        display: flex;
+        justify-content: start;
+        position: relative;
+        img.bear{
+            width: 90%;
+        }
+        .star{
+            width: 7%;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            
+        }
+        .star2{
+            width: 7%;
+            position: absolute;
+            bottom: 25%;
+            right: 20%;
+
+        }
+    }
+}
+@media(max-width:987px){
+    body{
+        overflow: scroll;
+    }
+    .hero{
+        margin-top: 10%;
+        padding: 0;
+        flex-direction: column;
+        .left{
+            width: 100%;
+            p{
+                font-size: 15px;
+            }
+        }
+        .right{
+            width: 100%;
+        }
+    }
+}
